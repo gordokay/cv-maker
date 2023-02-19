@@ -1,8 +1,8 @@
-import './App.css';
+import CvMaker from "./components/CvMaker";
 
 function App() {
   return (
-    <div></div>
+    <CvMaker />
   );
 }
 

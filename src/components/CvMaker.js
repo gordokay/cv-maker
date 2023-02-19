@@ -1,4 +1,5 @@
 import React from "react";
+import Cv from "./Cv";
 import CvForm from "./CvForm";
 
 export default class CvMaker extends React.Component {
@@ -19,6 +20,7 @@ export default class CvMaker extends React.Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleSubmit(e) {
@@ -42,8 +44,8 @@ export default class CvMaker extends React.Component {
 
   render() {
     if(this.state.hasSubmitted) {
-      return <Cv />
+      return <Cv fields={this.state} editHandler={this.handleEdit}/>
     }
-    return <CvForm fields={this.state} changeHandler={this.handleChange}/>
+    return <CvForm fields={this.state} changeHandler={this.handleChange} submitHandler={this.handleSubmit}/>
   }
 }
