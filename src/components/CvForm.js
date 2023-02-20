@@ -20,11 +20,11 @@ export default class CvForm extends React.Component {
           <FormInput label="Graduation date" type="date" name="graduationDate" value={graduationDate} changeHandler={changeHandler}/>
         </section>
         <section>
-        <h2>Work</h2>
-        <FormInput label="Company" type="text" name="company" value={company} changeHandler={changeHandler}/>
-        <FormInput label="Position" type="text" name="position" value={position} changeHandler={changeHandler}/>
-        <FormInput label="Start date" type="date" name="startDate" value={startDate} changeHandler={changeHandler}/>
-        <FormInput label="End date" type="date" name="endDate" value={endDate} changeHandler={changeHandler}/>
+          <h2>Work</h2>
+          <FormInput label="Company" type="text" name="company" value={company} changeHandler={changeHandler}/>
+          <FormInput label="Position" type="text" name="position" value={position} changeHandler={changeHandler}/>
+          <FormInput label="Start date" type="date" name="startDate" value={startDate} changeHandler={changeHandler}/>
+          <FormInput label="End date" type="date" name="endDate" value={endDate} changeHandler={changeHandler}/>
         </section>
         <button>Submit</button>
       </form>
