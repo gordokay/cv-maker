@@ -4,7 +4,7 @@ export default class Cv extends React.Component {
   render() {
     const { name, email, phone, school, degree, graduationDate, company, position, startDate, endDate} = this.props.fields;
     return (
-      <div>
+      <div className="container">
         <section>
           <h2>General</h2>
           <p>{name}</p>

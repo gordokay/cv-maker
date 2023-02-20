@@ -43,9 +43,17 @@ export default class CvMaker extends React.Component {
   }
 
   render() {
+    let cv;
     if(this.state.hasSubmitted) {
-      return <Cv fields={this.state} editHandler={this.handleEdit}/>
+      cv = <Cv fields={this.state} editHandler={this.handleEdit}/>
+    } else {
+      cv = <CvForm fields={this.state} changeHandler={this.handleChange} submitHandler={this.handleSubmit}/>
     }
-    return <CvForm fields={this.state} changeHandler={this.handleChange} submitHandler={this.handleSubmit}/>
+    return (
+      <main>
+        <h1>CV Maker</h1>
+        {cv}
+      </main>
+    )
   }
 }

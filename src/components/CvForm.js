@@ -6,7 +6,7 @@ export default class CvForm extends React.Component {
     const changeHandler = this.props.changeHandler;
     const { name, email, phone, school, degree, graduationDate, company, position, startDate, endDate} = this.props.fields;
     return (
-      <form onSubmit={this.props.submitHandler}>
+      <form onSubmit={this.props.submitHandler} className="container">
         <section>
           <h2>General</h2>
           <FormInput label="Name" type="text" name="name" value={name} changeHandler={changeHandler}/>
